@@ -7,8 +7,8 @@
 
 /* Cuerpo general */
 body {
-    background-color: aliceblue;
-    color: #333333;
+    background-color: white;
+    color: #1e375f;
     font-family: Georgia, serif;
     padding-top: 60px;
 }
@@ -18,13 +18,18 @@ h1 {
     font-size: 40px;
 }
 
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
 p {
     font-size: 20px;
 }
 
 /* Navbar */
 #navbar {
-    background-color: darkslateblue;
+    background-color: white;
     padding: 20px;
     position: fixed;
     width: 100%;
@@ -40,33 +45,64 @@ p {
 }
 
 #navbar a {
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(49, 48, 48, 0.323);
     text-decoration: none;
 }
 
-/* Secciones */
+/* Secciones en general */
 section {
     padding: 10px 40px;
+    scroll-margin-top: 60px;
 }
 
-/* Imágenes */
+/* Imagenes */
 img {
     width: 300px;
     border-radius: 10px;
 }
 
+/* Introduccion */
 #introduccion {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 40px;
-    background-color: aliceblue;
+    background: linear-gradient(to bottom, white, #d6eaf8)
 }
 
-#introduccion img {
-    width: 500px;
-    border-radius: 10px;
+#texto-intro {
+    text-align: justify;
 }
+
+#fotos-intro {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.imagen-chica {
+    width: 150px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+#imagen-grande {
+    width: 200px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.imagen-chica:first-child{
+    align-self: flex-start;
+}
+
+.imagen-chica:last-child{
+    align-self: flex-end;
+}
+
+/* Especialidades */
 
 #especialidades {
     display: flex;
@@ -111,16 +147,11 @@ img {
     max-height: 200px;
 }
 
+/* Formulario */
 #formulario {
     background-color: aliceblue;
 }
 
-#calendario {
-    background-color: rgb(211, 235, 255);
-}
-
-
-/* Formulario */
 input, textarea, select {
     display: block;
     margin: 10px 0;
@@ -142,6 +173,13 @@ button:hover {
     background-color: white;
     color: #143c68;
 }
+
+/* Calendario */
+
+#calendario {
+    background-color: rgb(211, 235, 255);
+}
+
 
 /* Footer */
 footer {
