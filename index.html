@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultas EGT</title>
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
 
@@ -11,21 +12,31 @@
         <ul>
             <li><a href="#introduccion">Inicio</a></li>
             <li><a href="#especialidades">Especialidades</a></li>
-            <li><a href="#calendario">Agendar cita</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#formulario">Contactar</a></li>
+            <li><a href="#calendario">Calendario</a></li>
         </ul>
     </nav>
 
     <section id="introduccion">
-        <p>Intrduccion, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <img src="img/foto psico ph.jpg" alt="Foto de psicologo EGT (placeholder)">
+        <div>
+            <h1>Ofrezco ayuda psicologica</h1><br>
+            <p>Introduccion, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        
     </section>
 
     <section id="especialidades">
-        <p>Especialidad 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <img src="img/especialidad 1 ph.webp" alt="Foto descriptiva de especialidad 1 (placeholder)">
-        <p>Especialidad 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <img src="img/especialidad 2 ph.jpg" alt="Foto descriptiva de especialidad 2 (placeholder)">
+        <div class="especialidad">
+            <img src="img/especialidad 1 ph.webp" alt="Especialidad 1">
+            <h3>ESPECIALIDAD 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </div>
+        <div class="especialidad">
+            <img src="img/especialidad 2 ph.jpg" alt="Especialidad 2">
+            <h3>ESPECIALIDAD 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </div>
     </section>
 
     <section id="formulario">
@@ -38,11 +49,11 @@
             <input type="number" id="telefono" name="telefono" placeholder="Tu telefono" required><br><br>
 
             <label for="seguro">Cuenta con seguro?</label><br>
-            <input type="radio" id="si" name="seguro" value="si">
             <label for="si">Si</label><br>
+            <input type="radio" id="si" name="seguro" value="si">
 
-            <input type="radio" id="no" name="seguro" value="no">
             <label for="no">No</label><br>
+            <input type="radio" id="no" name="seguro" value="no"><br><br>
 
             <label for="razon">Cual es la razon por la que busca una cita? (opcional)</label><br>
             <textarea id="razon" name="razon"></textarea><br><br>
@@ -52,7 +63,7 @@
     </section>
 
     <section id="calendario">
-        <p>Espacio para calendario interactivo (placeholder con imagen)</p>
+        <p>Espacio para calendario interactivo (placeholder con imagen). Solo visible al enviar informacion del formulario</p><br>
         <img src="img/calendario.png" alt="Foto de calendario como placeholder para el interactivo">
     </section>
 
