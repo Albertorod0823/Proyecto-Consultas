@@ -25,6 +25,7 @@ h2 {
 
 p {
     font-size: 20px;
+    color: #143c68;
 }
 
 /* Navbar */
@@ -112,18 +113,28 @@ img {
 /* Especialidades */
 
 #especialidades {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    background-color: rgb(211, 235, 255);
+    padding-left: 65px;
+    padding-right: 65px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    background: linear-gradient(to bottom, #d6eaf8, white);
+    color: #143c68;
 }
 
 .especialidad {
-    flex: 1;
-    position: relative;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     border-radius: 10px;
-    cursor: pointer;
+}
+
+.especialidad h3 {
+    text-align: center;
+}
+
+.especialidad p {
+    text-align: justify;
 }
 
 .especialidad img {
@@ -131,32 +142,13 @@ img {
     height: 200px;
     object-fit: cover;
     filter: brightness(0.5);
-}
-
-.especialidad h3 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 24px;
-}
-
-.especialidad p {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    color: white;
-    padding: 0 10px;
-}
-
-.especialidad:hover p {
-    max-height: 200px;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Formulario */
 #formulario {
-    background-color: aliceblue;
+    background: linear-gradient(to bottom, white, #d6eaf8)
 }
 
 input, textarea, select {
@@ -184,7 +176,7 @@ button:hover {
 /* Calendario */
 
 #calendario {
-    background-color: rgb(211, 235, 255);
+    background: linear-gradient(to bottom, #d6eaf8, white);
 }
 
 
