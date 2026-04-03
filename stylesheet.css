@@ -72,9 +72,16 @@ img {
 
 #texto-intro {
     text-align: justify;
+    padding-right: 50px;
+}
+
+#introduccion h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #fotos-intro {
+    padding-left: 30px;
     display: flex;
     align-items: center;
     gap: 20px;
