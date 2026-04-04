@@ -23,6 +23,7 @@
             <img id="imagen-grande" src="img/foto psico ph.png" alt="Foto de psicologo EGT (placeholder)">
             <img class="imagen-chica" src="img/foto chica 2.png" alt="Foto chica 2">
         </div>
+
         <div id="texto-intro">
             <h1>Ofrezco ayuda psicológica</h1><br>
             <h2>Mi nombre es Eric Gonzalez</h2><br>
@@ -36,11 +37,13 @@
             <img src="img/depresion y estres.jpg" alt="Depresion y estres">
             <p>La depresión y el estrés pueden manifestarse de muchas formas: cansancio constante, falta de motivación, irritabilidad o sensación de vacío. A través de un enfoque personalizado, trabajamos juntos para identificar las causas y desarrollar herramientas que te ayuden a recuperar el bienestar emocional.</p>
         </div>
+
         <div class="especialidad">
             <h3>Cuadros depresivos</h3>
             <img src="img/cuadro depresivo.jpg" alt="Cuadros depresivos">
             <p>Los cuadros depresivos van más allá de la tristeza ocasional. Son estados persistentes que afectan tu día a día, tus relaciones y tu calidad de vida. El tratamiento se enfoca en comprender tu experiencia particular y construir un camino hacia la estabilidad emocional.</p>
         </div>
+
         <div class="especialidad">
             <h3>Terapia de parejas</h3>
             <img src="img/terapia de pareja.jpg" alt="Terapia de parejas">
@@ -48,32 +51,35 @@
         </div>
     </section>
 
-    <section id="formulario">
-        <p>Formulario para contactar y confirmar cita</p>
-        <form>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required><br><br>
+    <section id="agendacion">
+        <div id="formulario" >
+            <form>
+                <p id="title-formulario">Porfavor, llena la informacion <!--- para agendar una cita---></p>
 
-            <label for="telefono">Telefono:</label>
-            <input type="number" id="telefono" name="telefono" placeholder="Tu telefono" required><br><br>
+                <label for="nombre">Nombre completo <span class="requerido">(requerido)</span></label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
 
-            <label for="seguro">Cuenta con seguro?</label><br>
-            <label for="si">Si</label><br>
-            <input type="radio" id="si" name="seguro" value="si">
+                <label for="telefono">Telefono <span class="requerido">(requerido)</span></label>
+                <input type="number" id="telefono" name="telefono" placeholder="Tu telefono" required>
 
-            <label for="no">No</label><br>
-            <input type="radio" id="no" name="seguro" value="no"><br><br>
+                <label for="seguro">Cuenta con seguro? <span class="requerido">(requerido)</span></label>
+                <label class="opcion" for="si">Si</label>
+                <input type="radio" id="si" name="seguro" value="si">
 
-            <label for="razon">Cual es la razon por la que busca una cita? (opcional)</label><br>
-            <textarea id="razon" name="razon"></textarea><br><br>
+                <label class="opcion" for="no">No</label>
+                <input id="no-opcion" type="radio" id="no" name="seguro" value="no">
 
-            <button type="submit">Enviar informacion</button>
-        </form>
-    </section>
+                <label  for="razon">Cual es la razon por la que busca una cita? <span class="requerido">(opcional)</span></label>
+                <textarea id="razon" name="razon"></textarea>
 
-    <section id="calendario">
-        <p>Espacio para calendario interactivo (placeholder con imagen). Solo visible al enviar informacion del formulario</p><br>
-        <img src="img/calendario.png" alt="Foto de calendario como placeholder para el interactivo">
+                <button type="submit">Enviar informacion</button>
+            </form>
+        </div>
+        
+        <div id="calendario">
+            <p>Espacio para calendario interactivo (placeholder con imagen). Solo visible al enviar informacion del formulario</p><br>
+            <img src="img/calendario.png" alt="Foto de calendario como placeholder para el interactivo">
+        </div>
     </section>
 
     <footer>
