@@ -154,14 +154,24 @@ img {
     margin: 0 auto;
 }
 
-/** Formulario y calendario */
+/** Agendacion */
 /* Formulario */
 
-#formulario {
+#agendacion {
     background: linear-gradient(to bottom, white, #d6eaf8);
     padding-left: 65px;
     padding-right: 65px;
     padding-top: 60px;
+    padding-bottom: 40px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+}
+
+#formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 label {
@@ -179,13 +189,19 @@ label {
     font-weight: bold;
 }
 
-input, textarea {
+input[type= "text"], input[type="number"] , textarea {
     display: block;
     margin-top: 10px;
     margin-bottom: 20px;
     padding: 8px;
     border-radius: 8px;
     border: 1px solid black;
+    width: 300px;
+}
+
+textarea{
+    resize: none;
+    height: 100px;
 }
 
 .opcion {
@@ -213,8 +229,9 @@ button:hover {
 /* Calendario */
 
 #calendario {
-    background: linear-gradient(to bottom, #d6eaf8, white);
-    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
