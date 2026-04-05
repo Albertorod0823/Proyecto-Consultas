@@ -162,16 +162,13 @@ img {
     padding-left: 65px;
     padding-right: 65px;
     padding-top: 60px;
-    padding-bottom: 40px;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    align-items: center;
 }
 
 #formulario {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
 }
 
 label {
@@ -189,17 +186,17 @@ label {
     font-weight: bold;
 }
 
-input[type= "text"], input[type="number"] , textarea {
+input, textarea {
     display: block;
     margin-top: 10px;
     margin-bottom: 20px;
     padding: 8px;
+    width: 300px;
     border-radius: 8px;
     border: 1px solid black;
-    width: 300px;
 }
 
-textarea{
+textarea {
     resize: none;
     height: 100px;
 }
@@ -227,11 +224,47 @@ button:hover {
 }
 
 /* Calendario */
-
 #calendario {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+}
+
+#calendario-widget {
+    border-radius: 15px;
+    padding: 20px;
+    width: 70%;
+}
+
+#cal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+#cal-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+#cal-tabla th {
+    color: #143c68;
+    padding: 8px;
+    font-size: 14px;
+}
+
+#cal-tabla td {
+    padding: 8px;
+    border-radius: 50%;
+    height: 50px;
+    cursor: pointer;
+}
+
+#cal-tabla td:hover {
+    background-color: #d6eaf8;
 }
 
 
