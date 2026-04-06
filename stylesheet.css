@@ -120,38 +120,78 @@ img {
 /* Especialidades */
 
 #especialidades {
-    padding-left: 65px;
-    padding-right: 65px;
-    padding-top: 60px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    transition: 0.3s ease;
     background: linear-gradient(to bottom, #d6eaf8, white);
-    color: #143c68;
 }
 
 .especialidad {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    border-radius: 10px;
-}
-
-.especialidad h3 {
-    text-align: center;
-}
-
-.especialidad p {
-    text-align: justify;
+    flex: 1;
+    transition: flex 0.3s ease;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    height: 400px;
 }
 
 .especialidad img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
     filter: brightness(0.5);
+}
+
+.especialidad h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+}
+
+.especialidad p {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    padding: 0 20px;
+    color: white;
+}
+
+.especialidad.activa p {
     display: block;
-    margin: 0 auto;
+    flex: 3;
+    text-align: justify;
+}
+
+.especialidad.activa h3 {
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.especialidad.activa img {
+    filter: brightness(0.15);
+}
+
+.especialidad.inactiva {
+    flex: 0.1;
+}
+
+.especialidad.inactiva h3 {
+    writing-mode: vertical-rl;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
 }
 
 /** Agendacion */
@@ -225,9 +265,17 @@ button:hover {
 
 /* Calendario */
 #calendario {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    flex-direction: column;
+}
+
+#calendario.visible {
+    display: flex;
+    opacity: 1;
 }
 
 #calendario-widget {
@@ -264,9 +312,23 @@ button:hover {
 }
 
 #cal-tabla td:hover {
-    background-color: #d6eaf8;
+    color: white;
 }
 
+#cal-tabla td[data-dia]:hover {
+    background-color: #143c68;
+    cursor: pointer;
+}
+
+#cal-tabla td:not([data-dia]) {
+    cursor: default;
+}
+
+.dia-seleccionado {
+    background-color: #143c68;
+    color: white;
+    border-radius: 50%;
+}
 
 /* Footer */
 
@@ -275,4 +337,44 @@ footer {
     color: white;
     padding: 20px;
     text-align: center;
+}
+
+footer p {
+    color: white;
+}
+
+/* Pop up */
+#popup-confirmacion {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+#popup-contenido {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 400px;
+}
+
+#popup-botones {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#msg-confirmacion {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
 }
