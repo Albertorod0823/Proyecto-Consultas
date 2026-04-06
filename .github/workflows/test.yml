@@ -22,4 +22,4 @@ jobs:
       - name: Instalar Jest
         run: npm install -g jest
       - name: Correr pruebas JS
-        run: jest --testPathPattern=test.js
+        run: jest test.js
