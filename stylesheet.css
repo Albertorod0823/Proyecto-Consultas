@@ -265,9 +265,16 @@ button:hover {
 
 /* Calendario */
 #calendario {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#calendario.visible {
+    display: flex;
+    opacity: 1;
 }
 
 #calendario-widget {
@@ -304,9 +311,9 @@ button:hover {
 }
 
 #cal-tabla td:hover {
-    background-color: #d6eaf8;
+    background-color: #143c68;
+    color: white;
 }
-
 
 /* Footer */
 
@@ -315,4 +322,8 @@ footer {
     color: white;
     padding: 20px;
     text-align: center;
+}
+
+footer p {
+    color: white;
 }

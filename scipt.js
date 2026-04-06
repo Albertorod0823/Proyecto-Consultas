@@ -20,3 +20,15 @@ especialidades.forEach(function(card) {
         card.classList.add('activa');
     });
 });
+
+// Ocultar calendario
+const form = document.querySelector('form');
+const calendario = document.getElementById('calendario');
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    calendario.style.display = 'flex';
+    setTimeout(function() {
+        calendario.classList.add('visible');
+    }, 10);
+});
