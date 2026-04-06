@@ -1,4 +1,4 @@
-emailjs.init("PUBLIC ID");
+emailjs.init("PUBLIC KEY");
 
 const especialidades = document.querySelectorAll('.especialidad');
 
@@ -33,30 +33,6 @@ form.addEventListener('submit', function(e) {
     setTimeout(function() {
         calendario.classList.add('visible');
     }, 10);
-
-    form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const templateParams = {
-        nombre: document.getElementById('nombre').value,
-        telefono: document.getElementById('telefono').value,
-        seguro: document.querySelector('input[name="seguro"]:checked').value,
-        motivo: document.getElementById('razon').value,
-        fecha: 'Por confirmar'
-    };
-
-    emailjs.send('SERVICE ID', 'TEMPLATE ID', templateParams)
-        .then(function() {
-            calendario.style.display = 'flex';
-            setTimeout(function() {
-                calendario.classList.add('visible');
-            }, 10);
-        })
-        .catch(function(error) {
-            console.error('Error:', error);
-            alert('Hubo un error al enviar, intenta de nuevo');
-        });
-});
 });
 
 // Calendario interactivo
@@ -98,11 +74,47 @@ function generarCalendario(mes, anio) {
     
     // Agregar eventos de clic a los días
     document.querySelectorAll('#cal-body td[data-dia]').forEach(function(td) {
-        td.addEventListener('click', function() {
-            document.querySelectorAll('#cal-body td').forEach(t => t.classList.remove('dia-seleccionado'));
-            this.classList.add('dia-seleccionado');
-            diaSeleccionado = `${this.dataset.dia} de ${meses[mes]} de ${anio}`;
+    td.addEventListener('click', function() {
+        diaSeleccionado = `${this.dataset.dia} de ${meses[mes]} de ${anio}`;
+        document.getElementById('popup-fecha').textContent = diaSeleccionado;
+        const popup = document.getElementById('popup-confirmacion');
+        popup.style.display = 'flex';
         });
+    });
+
+    document.getElementById('btn-cancelar').addEventListener('click', function() {
+        document.getElementById('popup-confirmacion').style.display = 'none';
+        diaSeleccionado = null;
+    });
+
+    document.getElementById('btn-confirmar').addEventListener('click', function() {
+        document.getElementById('popup-confirmacion').style.display = 'none';
+        
+        // Bloquear calendario
+        document.querySelectorAll('#cal-body td[data-dia]').forEach(function(td) {
+            td.style.pointerEvents = 'none';
+        });
+        document.getElementById('prev-mes').style.pointerEvents = 'none';
+        document.getElementById('next-mes').style.pointerEvents = 'none';
+
+        // Enviar correo
+        const templateParams = {
+            nombre: document.getElementById('nombre').value,
+            telefono: document.getElementById('telefono').value,
+            seguro: document.querySelector('input[name="seguro"]:checked').value,
+            motivo: document.getElementById('razon').value || 'El paciente no proporciono informacion de motivo de cita',
+            fecha: diaSeleccionado
+        };
+
+        emailjs.send('SERVICE ID', 'TEMPLATE ID', templateParams)
+            .then(function() {
+                document.getElementById('calendario').innerHTML += 
+                    '<p id="msg-confirmacion">Correo enviado. El psicólogo se comunicará con usted brevemente.</p>';
+            })
+            .catch(function(error) {
+                console.error('Error:', error);
+                alert('Hubo un error al enviar, intenta de nuevo');
+            });
     });
 }
 
