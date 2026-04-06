@@ -33,7 +33,7 @@
 
     <section id="especialidades">
         <div class="especialidad">
-            <h3>Depresion y estres</h3>
+            <h3>Depresión y estrés</h3>
             <img src="img/depresion y estres.jpg" alt="Depresion y estres">
             <p>La depresión y el estrés pueden manifestarse de muchas formas: cansancio constante, falta de motivación, irritabilidad o sensación de vacío. A través de un enfoque personalizado, trabajamos juntos para identificar las causas y desarrollar herramientas que te ayuden a recuperar el bienestar emocional.</p>
         </div>
@@ -64,10 +64,10 @@
 
                 <label for="seguro">Cuenta con seguro? <span class="requerido">(requerido)</span></label>
                 <label class="opcion" for="si">Si</label>
-                <input type="radio" id="si" name="seguro" value="si">
+                <input type="radio" id="si" name="seguro" value="Si">
 
                 <label class="opcion" for="no">No</label>
-                <input id="no-opcion" type="radio" id="no" name="seguro" value="no">
+                <input type="radio" id="no" name="seguro" value="No">
 
                 <label  for="razon">Cual es la razon por la que busca una cita? <span class="requerido">(opcional)</span></label>
                 <textarea id="razon" name="razon"></textarea>
@@ -75,13 +75,13 @@
                 <button type="submit">Enviar informacion</button>
             </form>
         </div>
-        
+
         <div id="calendario">
             <div id="calendario-widget">
                 <div id="cal-header">
-                    <button id="prev-mes">←</button>
+                    <button type="button" id="prev-mes">←</button>
                     <h3>Abril 2026</h3>
-                    <button id="next-mes">→</button>
+                    <button type="button" id="next-mes">→</button>
                 </div>
 
                 <table id="cal-tabla">
@@ -117,7 +117,6 @@
                 </table>
             </div>
         </div>
-        
     </section>
 
     <footer>
@@ -125,6 +124,17 @@
         <p>Contacto: correo@ejemplo.com</p>
     </footer>
 
+    <div id="popup-confirmacion">
+    <div id="popup-contenido">
+        <p id="popup-mensaje">¿Deseas agendar una cita para el <span id="popup-fecha"></span>?</p>
+        <div id="popup-botones">
+            <button type="button" id="btn-confirmar">Sí, agendar</button>
+            <button type="button" id="btn-cancelar">No, elegir otro día</button>
+        </div>
+    </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="scipt.js"></script>
 
 </body>

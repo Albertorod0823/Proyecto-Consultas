@@ -1,0 +1,25 @@
+name: Validar proyecto web
+
+on: [push, pull_request]
+
+jobs:
+  validate-html:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Instalar validador HTML
+        run: npm install -g html-validate
+      - name: Validar HTML
+        run: html-validate index.html
+
+  validate-js:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Instalar Jest
+        run: npm install -g jest
+      - name: Correr pruebas JS
+        run: jest test.js
