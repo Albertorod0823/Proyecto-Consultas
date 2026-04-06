@@ -311,8 +311,22 @@ button:hover {
 }
 
 #cal-tabla td:hover {
+    color: white;
+}
+
+#cal-tabla td[data-dia]:hover {
+    background-color: #143c68;
+    cursor: pointer;
+}
+
+#cal-tabla td:not([data-dia]) {
+    cursor: default;
+}
+
+.dia-seleccionado {
     background-color: #143c68;
     color: white;
+    border-radius: 50%;
 }
 
 /* Footer */
