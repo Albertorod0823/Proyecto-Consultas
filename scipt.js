@@ -1,4 +1,4 @@
-emailjs.init("mrdC7Wbz-SBMC-85J");
+emailjs.init("PUBLIC KEY");
 
 const especialidades = document.querySelectorAll('.especialidad');
 
@@ -106,7 +106,7 @@ function generarCalendario(mes, anio) {
             fecha: diaSeleccionado
         };
 
-        emailjs.send('service_4teq7hn', 'template_vy2gpwe', templateParams)
+        emailjs.send('SERVICE KEY', 'TEMPLATE KEY', templateParams)
             .then(function() {
                 document.getElementById('calendario').innerHTML += 
                     '<p id="msg-confirmacion">Correo enviado. El psicólogo se comunicará con usted brevemente.</p>';
