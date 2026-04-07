@@ -106,7 +106,7 @@ function generarCalendario(mes, anio) {
             fecha: diaSeleccionado
         };
 
-        emailjs.send('SERVICE ID', 'TEMPLATE ID', templateParams)
+        emailjs.send('SERVICE KEY', 'TEMPLATE KEY', templateParams)
             .then(function() {
                 document.getElementById('calendario').innerHTML += 
                     '<p id="msg-confirmacion">Correo enviado. El psicólogo se comunicará con usted brevemente.</p>';
