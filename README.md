@@ -1,15 +1,15 @@
-#Consultas EGT
-##Descripción
+# Consultas EGT
+## Descripción
 El proyecto consiste en la realizacion de una landing page para un servicio de consultas de un psicologo, tendra la funcionalidad de ver su introudccion, los tipos de casos que trata y un calendario para poder agendar citas.
 
-##Problema identificado
+## Problema identificado
 La poca presencia en linea del psicologo resulta detrimental para su crecimiento con clientes, ademas de ello, es conveniente tener un recurso disponible a todo momento para aquellos futuros clientes que deseen atender sesiones.
 
-##Solución
+## Solución
 Creacion de una pagina con disponibilidad a todo momento y la facilidad de poder ver sus tratamientos y disponibilidad sin la necesidad de utilizar mucha energia o salir a la calle, ideal para alguien con problemas por resolver.
 
-##Arquitectura
-
+## Arquitectura
+![Diagrama de arquitectura](img/arqui.png)
 
 Tabla de contenidos (ToC) con enlaces o a la sección wiki dentro del repositorio o algún medio externo como ReadTheDocs.io
 Requerimientos:
