@@ -1,21 +1,22 @@
 # Consultas EGT
 ## Descripción
-El proyecto consiste en la realizacion de una landing page para un servicio de consultas de un psicologo, tendra la funcionalidad de ver su introudccion, los tipos de casos que trata y un calendario para poder agendar citas.
+El proyecto consiste en la realización de una landing page para un servicio de consultas de un psicólogo, tendrá la funcionalidad de ver su introudcción, los tipos de casos que trata y un calendario para poder agendar citas.
 
 ## Problema identificado
-La poca presencia en linea del psicologo resulta detrimental para su crecimiento con clientes, ademas de ello, es conveniente tener un recurso disponible a todo momento para aquellos futuros clientes que deseen atender sesiones. Esto desata varios problemas:
-* Poca gente descubre el servicio
-* Limitacion de horasa de atencion
-* Poco visual
+La poca presencia en linea del psicólogo resulta detrimental para su crecimiento con clientes, ademas de ello, es conveniente tener un recurso disponible a todo momento para aquellos futuros clientes que deseen atender sesiones. Esto desata varios problemas:
+- Poca gente descubre el servicio
+- Limitación de horas de atencion
+- Poco visual
 
 ## Solución
-Creacion de una pagina con disponibilidad a todo momento y la facilidad de poder ver sus tratamientos y disponibilidad sin la necesidad de utilizar mucha energia o salir a la calle, ideal para alguien con problemas por resolver.
+Creación de una paágina con disponibilidad a todo momento y la facilidad de poder ver sus tratamientos y disponibilidad sin la necesidad de utilizar mucha energia o salir a la calle, ideal para alguien con problemas por resolver.
 
 ## Arquitectura
 La solución del proyecto está compuesta por:
-Frontend: HTML, CSS y JavaScript
-Backend / API: Emailjs y JavaScript
-Infraestructura: GitHub
+
+- Frontend: HTML, CSS y JavaScript
+- Backend / API: Emailjs y JavaScript
+- Infraestructura: GitHub
 
 ![Diagrama de arquitectura](img/arqui.png)
 El usuario interactúa con el frontend que envía los datos al backend, específicamente el servicio Emailjs, que envía el correo electrónico al psicólogo para que el pueda confirmar o rechazar la cita.
@@ -36,15 +37,12 @@ El usuario interactúa con el frontend que envía los datos al backend, específ
 ## Requerimientos
 
 ## Infraestructura
-* Servidor de aplicación: No aplica
-* Servidor web: No aplica
-* Base de datos: No aplica en esta versión
 * Sistema operativo recomendado: Windows, macOS o Linux
 
 ## Software y dependencias
-* Navegador web moderno (Chrome, Firefox, Edge, Opera)
-* Git
+* Navegador web (Chrome, Firefox, Edge, Opera)
 * Cuenta en EmailJS con Service ID, Template ID y Public Key configurados
+* Git
 
 ## Paquetes adicionales
 * [EmailJS](https://www.emailjs.com/) — servicio para envío de correos desde el frontend
