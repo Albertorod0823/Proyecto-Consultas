@@ -51,6 +51,7 @@ El usuario interactúa con el frontend que envía los datos al backend, específ
 
 ## Clonar repositorio
 git clone https://github.com/Albertorod0823/Proyecto-Consultas.git
+
 cd Proyecto-Consultas
 
 ## Configurar EmailJS
@@ -112,6 +113,7 @@ El psicólogo puede:
 
 ## 1. Clonar repositorio
 git clone https://github.com/Albertorod0823/Proyecto-Consultas.git
+
 cd Proyecto-Consultas
 
 ## 2. Crear nueva rama
