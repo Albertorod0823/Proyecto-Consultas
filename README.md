@@ -52,7 +52,7 @@ El usuario interactúa con el frontend que envía los datos al backend, específ
 ## Instalación
 
 ## Clonar repositorio
-git clone https://github.com/tu-usuario/Proyecto-Consultas.git
+git clone https://github.com/Albertorod0823/Proyecto-Consultas.git
 cd Proyecto-Consultas
 
 ## Configurar EmailJS
@@ -94,11 +94,50 @@ Las credenciales de EmailJS no se incluyen en el repositorio por privacidad. Par
 * Credenciales reemplazadas en script.js
 * Navegador disponible
 
-Uso:
-Sección de referencia para usuario final. Manual que se hará referencia para usuarios finales.
-Sección de referencia para usuario administrador.
-Contribución:
-Guía de contribución para usuarios.
-Debe contar con pasos específicos para clonar repositorio, crear un nuevo branch, enviar el pull request, esperar a hacer el merge.
-Roadmap:
-Requerimientos que se implementarán en un futuro.
+## Uso
+
+## Referencia para usuario final (paciente)
+El paciente puede:
+* Ver la introducción y perfil del psicólogo para conocerlo un poco
+* Consultar las especialidades y tipos de casos que se atienden
+* Llenar el formulario con sus datos de contacto
+* Seleccionar una fecha disponible en el calendario
+* Confirmar su cita y recibir confirmación por telefono
+
+## Referencia para usuario administrador (psicólogo)
+El psicólogo puede:
+* Recibir correos automáticos con los datos del paciente y fecha solicitada
+* Confirmar o rechazar la cita mediante una llamada o mensaje
+* Gestionar las credenciales de EmailJS
+
+## Contribución
+
+## 1. Clonar repositorio
+git clone https://github.com/Albertorod0823/Proyecto-Consultas.git
+cd Proyecto-Consultas
+
+## 2. Crear nueva rama
+git checkout -b feature/nombre-cambio
+
+## 3. Guardar cambios
+git add .
+git commit -m "feat: descripción breve del cambio"
+
+## 4. Subir rama
+git push origin feature/nombre-cambio
+
+## 5. Enviar Pull Request
+* Abrir un Pull Request hacia `develop`
+* Describir claramente el objetivo de la contribución
+* Adjuntar evidencia en caso de tenerla
+
+## 6. Esperar revisión y merge
+* Atender comentarios
+* Realizar ajustes
+* Hacer merge al aprobarse
+
+## Roadmap
+* **Responsividad** — adaptar el diseño para dispositivos de diferentes tamaños mediante media queries
+* **Base de datos** — implementar una base de datos para registrar citas agendadas y bloquear automáticamente las fechas y horarios ya ocupados
+* **Calendario dinámico** — mostrar únicamente los horarios disponibles del psicólogo en tiempo real
+* **Panel de administración** — permitir al psicólogo gestionar sus citas agendadas directamente desde la página, puediendo bloquear días o liberarlos
